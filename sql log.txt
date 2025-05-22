@@ -1,0 +1,63 @@
+SELECT 
+    f.film,
+    f.release_date,
+    b.budget,
+    b.box_office_us_canada,
+    b.box_office_worldwide,
+    ROUND(b.box_office_worldwide * 1.0 / b.budget, 2) AS roi,
+    CASE
+        WHEN b.box_office_worldwide / b.budget >= 2 THEN 'Financial Success'
+        WHEN b.box_office_worldwide / b.budget < 1 THEN 'Financial Failure'
+        ELSE 'Moderate Success'
+    END AS financial_status
+FROM 
+    pixar_films f
+JOIN 
+    box_office b 
+ON 
+    f.film = b.film
+ORDER BY 
+    roi DESC;
+-- This query retrieves the film title, release date, budget, box office earnings in the US and Canada,
+-- worldwide box office earnings, and calculates the return on investment (ROI) for each Pixar film.
+-- It also categorizes the financial status of each film based on its ROI.
+
+SELECT
+      f.film,
+      f.release_date,
+      b.budget,
+        b.box_office_us_canada,
+        b.box_office_other,
+        b.box_office_worldwide,
+        f.run_time,
+        f.rating,
+        r.rotten_tomatoes_score,
+        r.rotten_tomatoes_counts,
+        r.metacritic_score,
+        r.metacritic_counts,
+        r.imdb_score,
+        r.imdb_counts,
+        r.cinema_score
+FROM
+      pixar_films f
+LEFT JOIN box_office b
+ON
+      f.film = b.film
+LEFT JOIN
+         public_response r
+ON
+        f.film = r.film
+     --- rotten_tomatoes_counts
+     ----award type -----
+     SELECT
+    a.film,
+    EXTRACT(YEAR FROM f.release_date) AS release_year,
+    a.award_type,
+    a.status
+FROM 
+    aca a
+LEFT JOIN 
+    pixar_films f 
+    ON a.film = f.film
+ORDER BY
+    release_year 
