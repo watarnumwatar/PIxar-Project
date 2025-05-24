@@ -1,5 +1,6 @@
-30 Years of Pixar: A Legacy in Animation
-(SQL & Power BI Dashboard Analysis)
+30 Years of Pixar: A Legacy in Animation (SQL & Power BI Dashboard Analysis)
+
+
 🔸 Genre & Subgenre Over Time
 By analyzing trends in film genres and their critical and financial performance, Pixar can better understand which types of stories resonate most with audiences and critics. Genres such as Adventure and Family Drama have consistently outperformed others. These insights could help guide Pixar’s content strategy—either reinforcing strengths in popular genres or exploring underserved categories to find new creative opportunities.
 
@@ -110,3 +111,15 @@ Audience Insights: Audience scores remain more stable than critic reviews. Balan
 Awards Decline: Recent years show a dip in nominations and wins. This suggests the need to innovate and compete beyond franchise familiarity.
 
 By continuing to apply data-driven insights like these, Pixar can sustain its creative excellence while adapting to changing market conditions, audience preferences, and industry trends.
+
+
+Tools Used
+
+PostgreSQL
+
+SQL
+
+Power BI
+
+GitHub (version control and documentation)
+
