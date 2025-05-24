@@ -1,7 +1,49 @@
-30 Years of Pixar: A Legacy in Animation (SQL & Power BI Dashboard Analysis)
+30 Years of Pixar: A Legacy in Animation
+(SQL & Power BI Analysis)
+Objective & Purpose
+To present a dynamic visual and analytical overview of Pixar's 30-year journey in filmmaking, utilizing SQL and Power BI to explore:
 
+ Pixar Films Dataset
+🗂️ Overview
+A comprehensive dataset capturing detailed information on all Pixar films from Toy Story (1995) to Inside Out 2 (2024).
 
-🔸 Genre & Subgenre Over Time
+File Type: CSV
+
+Data Structure: Multiple related tables
+
+Total Records: 28 films
+
+Total Fields: 22 attributes
+
+Last Updated: March 5, 2025
+
+📁 Source & License
+
+Source: Eric Leung, via GitHub
+
+License: Public Domain
+
+ Prepare & Import/Export Data in SQL
+Step 1: Data Cleaning
+
+Removed Rows with Missing Values:
+Ensured data integrity by deleting all records containing null or incomplete fields.
+
+Standardized Date Format:
+Reformatted the release_year column into a consistent YYYY format for uniformity across queries and time-series visualizations.
+
+Step 2: Import into SQL
+
+Imported the cleaned CSV files into a relational database system (e.g., PostgreSQL/MySQL).
+
+Normalized the data into multiple related tables for genres, films, financials, and reviews using primary and foreign keys.
+
+Step 3: Export for Power BI
+
+Queried cleaned and structured data using SQL SELECT statements.
+
+Exported results into CSV format to be imported into Power BI for dashboard development and data visualization.
+ Genre & Subgenre Over Time
 By analyzing trends in film genres and their critical and financial performance, Pixar can better understand which types of stories resonate most with audiences and critics. Genres such as Adventure and Family Drama have consistently outperformed others. These insights could help guide Pixar’s content strategy—either reinforcing strengths in popular genres or exploring underserved categories to find new creative opportunities.
 
 Methodology:
@@ -111,15 +153,3 @@ Audience Insights: Audience scores remain more stable than critic reviews. Balan
 Awards Decline: Recent years show a dip in nominations and wins. This suggests the need to innovate and compete beyond franchise familiarity.
 
 By continuing to apply data-driven insights like these, Pixar can sustain its creative excellence while adapting to changing market conditions, audience preferences, and industry trends.
-
-
-Tools Used
-
-PostgreSQL
-
-SQL
-
-Power BI
-
-GitHub (version control and documentation)
-
