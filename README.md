@@ -1,46 +1,100 @@
-🎬 Pixar Films Legacy Analysis (1995–2024)
-🧠 Objective:
-Uncover how Pixar’s storytelling, genre evolution, financial performance, awards, and creative contributors have shaped its legacy over the past 30 years.
+30 Years of Pixar: A Legacy in Animation
+SQL & Power BI Dashboard Analysis
 
-📊 Tools & Technologies:
-SQL | Excel | Pivot Charts | Data Cleaning | Data Visualization
+Genre and Subgenre Over Time
+By analyzing trends in film genres and their financial and critical performance, we can see which story types consistently resonate with audiences and critics. Genres like Adventure and Family Drama have historically performed well.
 
-📂 Dataset Info:
+Methodology
+Counted the number of films per genre and subgenre using SQL.
 
-📁 Source: Eric Leung (GitHub, Public Domain)
+Calculated each subgenre’s proportion relative to the total number of films.
 
-🎞️ Records: 28 films | 22 fields | CSV format
+Visualized these proportions over time using bar and line charts.
 
-📅 Coverage: 1995 (Toy Story) → 2024 (Inside Out 2)
+Joined release_year to genre data to observe long-term trends.
 
-📌 Structure: Multiple tables (films, genres, people, ratings, awards)
+Insights
+Subgenre proportions widened by 2013, then became more evenly distributed post-2014.
 
-🧩 Key Areas of Analysis
-📈 Release Trends
-Grouped by 5-year periods to reveal Pixar’s rising production pace and peak release years.
+A shift occurred around 2015 with Inside Out, reflecting themes of emotional complexity and mental health.
 
-🎭 Genre Evolution
-Tracked shifting genre and subgenre focus over time — notably post-2015’s Inside Out.
+Broader cultural changes, including increased awareness of inclusion and mental health, likely influenced this diversification.
 
-💰 Financial Analysis
-ROI calculations revealed patterns of success and concern — from Toy Story’s legendary return to recent streaming-driven declines.
+Financial Performance (Box Office & Budget)
+Understanding the relationship between production budgets and box office earnings helps guide strategic investment. Return on Investment (ROI) was used to classify each film’s financial outcome.
 
-🍅 Public Response
-Analyzed ratings across Rotten Tomatoes, Metacritic, and IMDb. Notable drop in reception with Cars 2 and a general decline in average scores.
+ROI > 2 → Financial Success
 
-🏆 Awards & Recognition
-Tracked Oscar nominations & wins — especially for Best Animated Feature. Visualized Pixar’s award-winning streaks and recent declines.
+ROI < 1 → Financial Failure
 
-🎨 Creative Contributors
-Explored roles and impact of Pixar legends like Andrew Stanton, Pete Docter, and John Lasseter. Showed correlation between major contributors and film success.
+Methodology
+Calculated ROI for each film using box office and budget data.
 
-🔍 Project Highlights
-✅ Cleaned duplicate and erroneous creator entries
+Classified films as success, failure, or moderate performance.
 
-🧮 Calculated ROI and genre proportions using SQL
+Tracked ROI trends over time with the addition of release_year.
 
-📊 Built insightful visualizations with Excel (Pivot Tables & Charts)
+Used line and area charts to illustrate ROI and financial progression.
 
-🔄 Merged tables for deeper relational insights (SQL JOINs)
+Insights
+Pixar’s budget significantly increased between 2004–2008 following Disney’s acquisition in 2006.
 
-🧠 Developed narrative-driven insights linked to real-world events (e.g. Disney acquisition, COVI
+ROI dropped sharply during the COVID-19 period (2020–2022), with limited theatrical releases.
+
+Inside Out 2 (2024) recorded a strong recovery with $1.7 billion in global revenue.
+
+Despite higher budgets, ROI has declined overall—possibly due to rising production costs and the shift to streaming distribution.
+
+Public Response Over Time
+To evaluate how Pixar’s films have been received over time, we analyzed data from Rotten Tomatoes, Metacritic, and IMDb.
+
+Methodology
+Collected review scores from all three platforms.
+
+Created dual-axis line charts and scatter plots for comparison.
+
+Identified outlier films with particularly high or low reception.
+
+Insights
+Average scores across all platforms have gradually declined over time.
+
+Cars 2 (2011) saw the steepest drop in ratings, likely due to a genre and tone shift.
+
+Rotten Tomatoes scores tend to be higher; Metacritic is more critical.
+
+Audience scores (IMDb) show more consistency, indicating stronger emotional engagement.
+
+Critics often rate films more analytically, while audience ratings are driven by entertainment value.
+
+Awards and Recognition
+Award data, especially from the Academy Awards, reveals how Pixar’s critical acclaim has evolved.
+
+Methodology
+Merged academy_awards data with film data by year.
+
+Created a total_nominations field to track annual trends.
+
+Used stacked bar charts and donut charts to display nomination and win rates.
+
+Insights
+Pixar's nominations peaked between 2003–2019, especially in the Best Animated Feature category.
+
+Only about 30% of all nominations resulted in wins.
+
+After 2020, Pixar’s award recognition declined.
+
+Recent Academy wins by independent and international films (e.g., Flow in 2025) suggest growing competition beyond major studios.
+
+Conclusion
+This analysis provides insight into Pixar’s creative and financial trajectory over three decades. It highlights the importance of data in guiding future decisions related to storytelling, budgeting, and audience engagement.
+
+Key Takeaways
+Genre Strategy: Consistency in core genres, with room for exploring emotionally rich or underrepresented themes.
+
+Financial Planning: Rising budgets must be balanced with ROI performance, particularly with changing distribution models.
+
+Public Engagement: Audience ratings remain strong; maintaining emotional resonance is key.
+
+Awards Outlook: Pixar may need to innovate further to compete with evolving trends in animation and storytelling.
+
+thank for watching my work
